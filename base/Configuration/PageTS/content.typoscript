@@ -17,4 +17,4 @@ mod.wizards.newContentElement.wizardItems {
     show := addToList(slider)
   }
 }
-mod.web_layout.tt_content.preview.highlight = EXT:base/Resources/Private/Templates/Preview/Slider.html
+mod.web_layout.tt_content.preview.slider = EXT:base/Resources/Private/Templates/Preview/Slider.html
