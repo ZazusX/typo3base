@@ -9,7 +9,7 @@
 /* text
 */
 :root {
-  --bs-font-sans-serif: "Figtree", sans-serif;
+  --bs-font-sans-serif: 'Figtree', sans-serif;
   --bs-body-font-size: 15px;
   --bs-body-line-height: 1.6667em;
   --bs-body-color: #2d3445;
@@ -83,7 +83,7 @@ blockquote {
   padding-left: 56px;
   padding-top: 10px;
   padding-bottom: 30px;
-  background-image: url(../img/svg/quote.svg);
+  background-image: url(../svg/quote.svg);
   background-repeat: no-repeat;
   background-position-x: 5px;
   background-size: 28px auto;
@@ -94,7 +94,7 @@ blockquote {
   padding-right: 26px;
 }
 .btn-cv {
-  background-image: url(../img/svg/plus.svg);
+  background-image: url(../svg/plus.svg);
   background-repeat: no-repeat;
   padding-bottom: 5px;
   padding-left: 50px;
@@ -175,16 +175,20 @@ hr {
 .modal-body hr {
   background-color: var(--bs-secondary);
 }
+.modal-body {
+  display: flex;
+  align-items: center;
+}
 footer .container-fluid {
   position: relative;
 }
 footer .container-fluid:before {
-  content: "";
+  content: '';
   display: block;
   width: 28%;
   position: absolute;
   bottom: 100%;
-  background-image: url(../img/svg/R_footer.svg);
+  background-image: url(../svg/R_footer.svg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -264,7 +268,7 @@ footer a:hover {
     padding-left: 110px;
     padding-top: 21px;
     padding-bottom: 147px;
-    background-image: url(../img/svg/quote.svg);
+    background-image: url(../svg/quote.svg);
     background-repeat: no-repeat;
     background-position-x: 10px;
     background-size: 56px auto;

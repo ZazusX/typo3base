@@ -1,10 +1,6 @@
 <f:layout name="Home" />
 
 <f:section name="Main">
-  <f:format.raw>
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-  </f:format.raw>
-
   <section class="bg-secondary text-white">
     <div class="container-fluid">
       <div class="row">
@@ -23,11 +19,9 @@
         <div class="col-md-6 align-self-end">
           <div class="row">
             <div class="col-lg-8 offset-lg-2 pt-4.5">
-              <h1>Find it, fix it, leave it.</h1>
-              <blockquote>
-                Dr. Andrew Taylor Still,<br />
-                Gründer der Osteopathie
-              </blockquote>
+              <f:format.raw>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+              </f:format.raw>
             </div>
           </div>
           <h3>Osteopathie & Physiotherapie</h3>
@@ -146,8 +140,8 @@
           <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_logo_white.svg" class="img-fluid" alt="" />
         </div>
         <div class="col-md-8 text-end meta">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
+          <f:link.page pageUid="2">Impressum</f:link.page>
+          <f:link.page pageUid="3">Datenschutz</f:link.page>
         </div>
       </div>
     </div>

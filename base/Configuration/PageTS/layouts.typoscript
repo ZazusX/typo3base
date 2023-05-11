@@ -2,13 +2,14 @@ mod.web_layout.BackendLayouts {
     Home {
 		title = Home
 		config.backend_layout {
-			colCount = 1
-			rowCount = 3
+			colCount = 2
+			rowCount = 5
 			rows {
 				1 {
 					columns {
 						1 {
 							name = Intro
+							colspan = 2
 							colPos = 0
 						}
 					}
@@ -16,16 +17,42 @@ mod.web_layout.BackendLayouts {
 				2 {
 					columns {
 						1 {
-							name = Highlight
+							name = CV left
 							colPos = 1
+						}
+						2 {
+							name = CV right
+							colPos = 2
 						}
 					}
 				}
 				3 {
 					columns {
 						1 {
-							name = Teasers
-							colPos = 2
+							name = Text
+							colspan = 2
+							colPos = 3
+						}
+					}
+				}
+				4 {
+					columns {
+						1 {
+							name = Slider
+							colspan = 2
+							colPos = 4
+						}
+					}
+				}
+				5 {
+					columns {
+						1 {
+							name = Text left
+							colPos = 5
+						}
+						2 {
+							name = Text right
+							colPos = 6
 						}
 					}
 				}

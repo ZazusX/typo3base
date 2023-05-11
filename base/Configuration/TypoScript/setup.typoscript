@@ -67,6 +67,7 @@ page {
     }
     includeCSS {
         fonts = EXT:base/Resources/Public/css/fonts.css
+        bootstrap = EXT:base/Resources/Public/css/bootstrap.min.css
         setup = EXT:base/Resources/Public/css/styles.css
         updates = EXT:base/Resources/Public/css/updates.css
     }
@@ -74,7 +75,9 @@ page {
         
     }
     includeJSFooter {
-        setup = EXT:base/Resources/Public/js/setup.js
+      smoothScroll = EXT:base/Resources/Public/js/smoothscroll.js
+      bootstrap = EXT:base/Resources/Public/js/bootstrap.bundle.min.js
+      setup = EXT:base/Resources/Public/js/setup.js
     }
     headerData {
 		183 = TEXT
