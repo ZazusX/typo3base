@@ -9,11 +9,13 @@
               <h5>Terminvereinbarung</h5>
               <h4>+43 664 4736298</h4>
             </div>
-            <img src="/typo3conf/ext/base/Resources/Public/images/svg/ralph_pariasek_calender.svg" alt="" width="35" />
+            <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_calender.svg" alt="" width="35" />
           </div>
         </div>
         <div class="col-md-8 pt-6">
-          <img src="/typo3conf/ext/base/Resources/Public/images/svg/ralph_pariasek_logo.svg" class="img-fluid" alt="" />
+          <f:link.page pageUid="1">
+            <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_logo.svg" class="img-fluid" alt="" />
+          </f:link.page>
         </div>
       </div>
     </div>
@@ -21,12 +23,12 @@
   <section class="bg-secondary text-primary">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 pt-6">
+        <div class="col-md-5 pt-6">
           <f:format.raw>
             <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
           </f:format.raw>
         </div>
-        <div class="col-md-6 offset-md-3 pt-6 pb-12">
+        <div class="col-md-6 offset-md-1 pt-6 pb-12">
           <f:format.raw>
             <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
           </f:format.raw>
@@ -38,7 +40,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4 pt-6">
-          <img src="/typo3conf/ext/base/Resources/Public/images/svg/ralph_pariasek_logo_white.svg" class="img-fluid" alt="" />
+          <f:link.page pageUid="1">
+            <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_logo_white.svg" class="img-fluid" alt="" />
+          </f:link.page>
         </div>
         <div class="col-md-8 text-end meta">
           <f:link.page pageUid="2">Impressum</f:link.page>
