@@ -1,0 +1,50 @@
+<f:layout name="Sub" />
+<f:section name="Main">
+  <section class="bg-secondary text-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-end text-primary pt-6">
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="me-2">
+              <h5>Terminvereinbarung</h5>
+              <h4>+43 664 4736298</h4>
+            </div>
+            <img src="/typo3conf/ext/base/Resources/Public/images/svg/ralph_pariasek_calender.svg" alt="" width="35" />
+          </div>
+        </div>
+        <div class="col-md-8 pt-6">
+          <img src="/typo3conf/ext/base/Resources/Public/images/svg/ralph_pariasek_logo.svg" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-secondary text-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 pt-6">
+          <f:format.raw>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+          </f:format.raw>
+        </div>
+        <div class="col-md-6 offset-md-3 pt-6 pb-12">
+          <f:format.raw>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+          </f:format.raw>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 pt-6">
+          <img src="/typo3conf/ext/base/Resources/Public/images/svg/ralph_pariasek_logo_white.svg" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-8 text-end meta">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</f:section>

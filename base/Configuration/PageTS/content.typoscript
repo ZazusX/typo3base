@@ -1,0 +1,20 @@
+
+mod.wizards.newContentElement.wizardItems {
+  hfwu {
+    header = Special page content
+    after = common
+    show = *
+    elements {
+      slider {
+        iconIdentifier = content-text
+        title = LLL:EXT:base/Resources/Private/Language/locallang.xlf:slider
+        description = LLL:EXT:base/Resources/Private/Language/locallang.xlf:slider_description
+        tt_content_defValues {
+          CType = slider
+        }
+      }
+    }
+    show := addToList(slider)
+  }
+}
+mod.web_layout.tt_content.preview.highlight = EXT:base/Resources/Private/Templates/Preview/Slider.html

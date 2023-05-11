@@ -1,0 +1,93 @@
+# Load default processing options
+imports:
+  - { resource: 'EXT:base/Configuration/Rte/Base.yaml' }
+editor:
+  config:
+    removePlugins: null
+    addButtons:
+      - Underline
+buttons:
+  link:
+    relAttribute:
+      enabled: true
+    page:
+      properties:
+        class:
+          default: internal-link
+    url:
+      properties:
+        class:
+          default: external-link
+    folder:
+      properties:
+        class:
+          default: folder
+    file:
+      properties:
+        class:
+          default: download
+    mail:
+      properties:
+        class:
+          default: mail
+    properties:
+      class:
+        allowedClasses: 'btn-primary,btn-secondary,btn-outline-primary,btn-outline-secondary,btn-light,btn-dark'
+classesAnchor:
+  internalLink:
+    class: 'internal-link'
+    type: 'page'
+    titleText: 'Opens internal link in this window'
+  btn_btnPrimary:
+    class: 'btn-primary'
+    type: 'page'
+    target: '_top'
+    titleText: ''
+  btn_btnSecondary:
+    class: 'btn-secondary'
+    type: 'page'
+    target: '_top'
+    titleText: ''
+  btn_btnOutlinePrimary:
+    class: 'btn-outline-primary'
+    type: 'page'
+    target: '_top'
+    titleText: ''
+  btn_btnOutlineSecondary:
+    class: 'btn-outline-secondary'
+    type: 'page'
+    target: '_top'
+    titleText: ''
+  btn_btnLight:
+    class: 'btn-light'
+    type: 'page'
+    target: '_top'
+    titleText: ''
+  btn_btnDark:
+    class: 'btn-dark'
+    type: 'page'
+    target: '_top'
+    titleText: ''
+  download:
+    class: 'btn-primary'
+    type: 'file'
+    target: '_blank'
+    titleText: 'Download file'
+  externalLink:
+    class: 'btn-primary'
+    type: 'url'
+    target: '_blank'
+    titleText: 'Opens External link in this window'
+  externalLinkNewWindow:
+    class: 'btn-primary'
+    type: 'url'
+    target: '_blank'
+    titleText: 'Opens External link in new window'
+  linkMail:
+    class: 'btn-primary'
+    type: 'mail'
+    titleText: 'Email Address'
+processing:
+  allowTags:
+    - s
+    - u

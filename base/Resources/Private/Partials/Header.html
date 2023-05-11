@@ -1,0 +1,49 @@
+<nav class="bg-white shadow-nav border-gray-200 pt-3 py-5 z-50 h-20 flex flex-wrap items-center fixed top-0 left-0 right-0 before:content-[''] before:z-30 before:block before:absolute before:inset-0 before:bg-white md:before:hidden md:py-4">
+	<div class="w-full flex flex-wrap items-end container-fluid md:items-center">
+		<f:link.page pageUid="1" class="flex items-center justify-self-start mr-auto z-40">
+			<img src="/typo3conf/ext/base/Resources/Public/svg/logo.svg" class="w-logo md:w-logo-md" alt="Xista Logo">
+		</f:link.page>
+		<div class="flex items-center md:hidden z-40">
+			<button data-collapse-toggle="menu" type="button" class="space-y-dot inline-flex flex-col items-center p-1 ml-7 text-sm text-dark rounded-lg md:hidden focus:outline-none" onclick="toggleMenu(this)" aria-controls="menu" aria-expanded="false">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</button>
+		</div>
+		<div id="menu" class="menu -translate-y-full md:translate-y-0">
+			<ul class="nav-list">
+				<li class="relative bg-white h-4 z-10 md:hidden"></li>
+				<f:for each="{mainnavigation}" as="menuItem" iteration="i">
+					<li class="relative">
+						<f:if condition="{menuItem.children}">
+							<f:then>
+								<button class="nav-link-toggle open:text-primary {f:if(condition:'{menuItem.active}',then:'text-primary')}" aria-current="page">{menuItem.title}</button>
+								<ul class="nav-sub invisible open:visible open:max-h-screen md:open:delay-100 md:open:opacity-100">
+									<f:for each="{menuItem.children}" as="menuItemChild" iteration="ii">
+										<f:if condition="{ii.isFirst}">
+											<f:then>
+												<li>
+													<f:link.page pageUid="{menuItemChild.data.uid}" target="{menuItemChild.data.target}" class="nav-sub-link {f:if(condition:'{menuItemChild.active}',then:'text-primary')}">{menuItemChild.title}</f:link.page>
+												</li>
+											</f:then>
+											<f:else>
+												<li class="border-dotted border-primary border-t-2">
+													<f:link.page pageUid="{menuItemChild.data.uid}" target="{menuItemChild.data.target}" class="nav-sub-link {f:if(condition:'{menuItemChild.active}',then:'text-primary')}">{menuItemChild.title}</f:link.page>
+												</li>
+											</f:else>
+										</f:if>
+									</f:for>
+								</ul>
+							</f:then>
+							<f:else>
+								<f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'text-primary')}">
+									{menuItem.title}
+								</f:link.page>
+							</f:else>
+						</f:if>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,136 @@
+@import 'EXT:base/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+
+page = PAGE
+page {
+    typeNum = 0    
+    10 = FLUIDTEMPLATE
+    10 {
+        templateRootPaths.0 = EXT:base/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:base/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:base/Resources/Private/Layouts/
+        
+        templateName.stdWrap.cObject = TEXT
+        templateName.stdWrap.cObject {
+            data = pagelayout
+            split {
+                token = pagets__
+                1.current = 1
+                1.wrap = |
+            }
+            override = Content
+            override.if.equals.data = pagelayout
+            override.if.value = default
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                levels = 3
+                includeSpacer = 1
+                as = mainnavigation
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+				special = list
+                special.value = 22,3,40,32,52,8
+                includeNotInMenu = 1
+                as = footerMenu
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			30 {
+                special = rootline
+                special.range = 0|-1
+                includeNotInMenu = 1
+                as = menuBreadcrumb
+			}
+            40 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            40 {
+                languages = 0
+                as = menuLanguage
+            }
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			50 {
+                special = rootline
+                special.range = 1|-1
+                includeNotInMenu = 0
+                as = menuBreadcrumb
+			}
+        }
+    }
+    meta {
+        viewport = width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no
+    }
+    includeCSS {
+        fonts = EXT:base/Resources/Public/css/fonts.css
+        setup = EXT:base/Resources/Public/css/styles.css
+        updates = EXT:base/Resources/Public/css/updates.css
+    }
+    includeJS {
+        
+    }
+    includeJSFooter {
+        setup = EXT:base/Resources/Public/js/setup.js
+    }
+    headerData {
+		183 = TEXT
+		183.value( 
+          <link rel="apple-touch-icon" sizes="180x180" href="/typo3conf/ext/base/Resources/Public/favico/apple-touch-icon.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/base/Resources/Public/favico/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/base/Resources/Public/favico/favicon-16x16.png">
+          <link rel="manifest" href="/typo3conf/ext/base/Resources/Public/favico/site.webmanifest">
+          <link rel="mask-icon" href="/typo3conf/ext/base/Resources/Public/favico/safari-pinned-tab.svg" color="#2d3445">
+          <link rel="shortcut icon" href="/typo3conf/ext/base/Resources/Public/favico/favicon.ico">
+          <meta name="msapplication-TileColor" content="#2d3445">
+          <meta name="msapplication-config" content="/typo3conf/ext/base/Resources/Public/favico/browserconfig.xml">
+          <meta name="theme-color" content="#2d3445">
+        )
+    }
+    bodyTag >
+    bodyTagCObject = TEXT
+    bodyTagCObject {
+        data = field:title
+        case = lower
+        stdWrap.replacement {
+            10 {
+                search = #\W#i
+                replace =
+                useRegExp = 1
+            }
+        }
+        wrap = <body class="home page-|">
+    }
+}
+
+lib.baseContentElement = < lib.contentElement
+lib.baseContentElement {
+  templateRootPaths {
+    1020 = EXT:base/Resources/Private/Templates/ContentElements/
+  }
+  partialRootPaths {
+    1020 = EXT:base/Resources/Private/Partials/ContentElements/
+  }
+  layoutRootPaths {
+    1020 = EXT:base/Resources/Private/Layouts/ContentElements/
+  }
+}
+
+tt_content.slider =< lib.baseContentElement
+tt_content.slider {
+  templateName = Slider
+  dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    20 {
+      references {
+        table = tt_content
+        fieldName = slides
+      }
+      as = slides
+    }
+  }
+}

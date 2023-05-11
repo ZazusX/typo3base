@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:base/Resources/Private/Language/locallang" date="2022-11-11T12:37:25Z" product-name="bases">
+		<header/>
+		<body>
+         
+         <trans-unit id="slider" xml:space="preserve" approved="yes">
+            <source>Slider</source>
+         </trans-unit>
+         <trans-unit id="slider_description" xml:space="preserve" approved="yes">
+            <source>Image slideshow</source>
+         </trans-unit>
+		</body>
+	</file>
+</xliff>

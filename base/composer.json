@@ -1,0 +1,21 @@
+{
+    "name": "issi/base",
+    "type": "typo3-cms-extension",
+    "description": "WX base extension.",
+    "license": ["GPL-2.0+"],
+    "keywords": ["TYPO3 CMS","site package"],
+    "require": {
+        "typo3/cms-core": "^12.0.0|dev-main",
+        "typo3/cms-fluid-styled-content": "^12.0.0|dev-main"
+    },
+	"autoload": {
+		"psr-4": {
+			"Issi\\Base\\": "Classes"
+		}
+	},
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "base"
+        }
+    }
+}

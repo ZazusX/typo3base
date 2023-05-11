@@ -1,0 +1,21 @@
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="carousel-inner">
+        <f:for each="{slides}" as="slide">
+          <div class="carousel-item active">
+            <f:image image="{slide}" alt="" class="d-block w-100" />
+          </div>
+        </f:for>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+    <img src="/typo3conf/ext/base/Resources/Public/svg/arrow_carousel_prev.svg" />
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+    <img src="/typo3conf/ext/base/Resources/Public/svg/arrow_carousel_next.svg" />
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

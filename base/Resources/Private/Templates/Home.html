@@ -1,0 +1,155 @@
+<f:layout name="Home" />
+
+<f:section name="Main">
+  <f:format.raw>
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+  </f:format.raw>
+
+  <section class="bg-secondary text-white">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-end text-primary pt-6">
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="me-2">
+              <h5>Terminvereinbarung</h5>
+              <h4>+43 664 4736298</h4>
+            </div>
+            <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_calender.svg" alt="" width="35" />
+          </div>
+        </div>
+        <div class="col-md-8 pt-6">
+          <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_logo.svg" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-6 align-self-end">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2 pt-4.5">
+              <h1>Find it, fix it, leave it.</h1>
+              <blockquote>
+                Dr. Andrew Taylor Still,<br />
+                Gründer der Osteopathie
+              </blockquote>
+            </div>
+          </div>
+          <h3>Osteopathie & Physiotherapie</h3>
+        </div>
+        <div class="col-md-6 pt-md-6">
+          <div class="video">
+            <video width="100%" autoplay muted poster="/typo3conf/ext/base/Resources/Public/images/ralph_pariasek_poster.jpg">
+              <source src="/typo3conf/ext/base/Resources/Public/video/ralph_pariasek_header.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1 col-lg-6 order-md-last offset-lg-1">
+          <div class="video-placeholder"></div>
+        </div>
+        <div class="col-md-11 col-lg-5 pt-md-6">
+          <h2>Ich bin</h2>
+          <h3>
+            Osteopath & Physiotherapeut&nbsp;–<br />
+            aber in erster Linie bin ich Zuhörer.
+          </h3>
+
+          <button type="button" class="btn-cv" data-bs-toggle="modal" data-bs-target="#cv">Curriculum vitae</button>
+
+          <div class="modal fade" id="cv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen text-white">
+              <div class="modal-content bg-primary">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="/typo3conf/ext/base/Resources/Public/svg/plus_close.svg" /></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-4 offset-md-1">
+                        <f:format.raw>
+                          <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                        </f:format.raw>
+                      </div>
+                      <div class="col-md-4 offset-md-1">
+                        <f:format.raw>
+                          <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+                        </f:format.raw>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 offset-lg-6">
+          <f:format.raw>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />
+          </f:format.raw>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container-fluid pt-4.5">
+      <f:format.raw>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '4'}" />
+      </f:format.raw>
+    </div>
+  </section>
+  <section>
+    <div class="container-fluid text-center">
+      <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_calender.svg" class="calendar" alt="" />
+      <div class="h1">+43 664 4736298</div>
+      <p>Termine nur nach telefonischer Vereinbarung</p>
+    </div>
+  </section>
+
+  <section class="bg-secondary text-white">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 pt-6">
+          <f:format.raw>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+          </f:format.raw>
+        </div>
+        <div class="col-md-6 offset-md-1 pt-6 pb-6">
+          <f:format.raw>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '6'}" />
+          </f:format.raw>
+          <div class="footer-offset"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-primary text-white">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 order-md-last offset-md-1 pt-6">
+          <div class="footer"><img src="/typo3conf/ext/base/Resources/Public/images/ralph_pariasek_footer.jpg" class="img-fluid" alt="" /></div>
+        </div>
+        <div class="col-md-5 pt-6">
+          <p>
+            <strong>Terminvereinbarung<br /> +43 664 4736298</strong>
+          </p>
+          <p>
+            Osteopathie & Physiotherapie<br /> Ralph Pariasek, MSc D.O.<br /> Radeckgasse 1/Tür 11, 1040 Wien<br />
+            office@ralphpariasek.at
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 pt-4.5">
+          <img src="/typo3conf/ext/base/Resources/Public/svg/ralph_pariasek_logo_white.svg" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-8 text-end meta">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</f:section>
